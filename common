@@ -1,0 +1,5 @@
+#REPO_BASE="http://pp.info.uni-karlsruhe.de/git"
+#REPO_LIBFIRM="$REPO_BASE/libfirm.git"
+#REPO_CPARSER="$REPO_BASE/cparser.git"
+REPO_LIBFIRM="/Users/matze/dev/firm/libfirm"
+MAKEFLAGS="-j10"

@@ -1,6 +1,8 @@
-#REPO_BASE="http://pp.info.uni-karlsruhe.de/git"
-#LIBFIRM_REPO="${REPO_BASE}/libfirm.git"
-#CPARSER_REPO="${REPO_BASE}/cparser.git"
-LIBFIRM_REPO="/Users/matze/dev/firm/libfirm/.git"
-CPARSER_REPO="/Users/matze/dev/firm/.git"
-MAKEFLAGS="-j10"
+REPO_BASE="http://pp.info.uni-karlsruhe.de/git"
+LIBFIRM_REPO="${REPO_BASE}/libfirm.git"
+CPARSER_REPO="${REPO_BASE}/cparser.git"
+MAKEFLAGS="-j1"
+
+if -x common_override; then
+	source common_override
+fi

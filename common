@@ -3,6 +3,6 @@ LIBFIRM_REPO="${REPO_BASE}/libfirm.git"
 CPARSER_REPO="${REPO_BASE}/cparser.git"
 MAKEFLAGS="-j1"
 
-if -x common_override; then
+if test -e common_override; then
 	source common_override
 fi

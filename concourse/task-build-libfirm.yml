@@ -1,0 +1,13 @@
+platform: linux
+image_resource:
+  type: docker-image
+  source:
+    repository: 'libfirm/ciworker_minimal'
+inputs:
+- name: cifirm
+- name: libfirm
+outputs:
+- name: libfirm-install
+
+run:
+  path: cifirm/libfirm.sh

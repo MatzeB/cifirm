@@ -1,0 +1,14 @@
+platform: linux
+image_resource:
+  type: docker-image
+  source:
+    repository: 'libfirm/ciworker_minimal'
+inputs:
+- name: cifirm
+- name: cparser
+- name: libfirm-install
+outputs:
+- name: cparser-install
+
+run:
+  path: cifirm/cparser.sh

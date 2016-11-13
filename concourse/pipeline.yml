@@ -1,0 +1,29 @@
+resources:
+- name: cifirm
+  type: git
+  source:
+    uri: https://github.com/MatzeB/cifirm.git
+    branch: concourse
+- name: cparser
+  type: git
+  source:
+    uri: http://pp.info.uni-karlsruhe.de/git/cparser.git
+- name: libfirm
+  type: git
+  source:
+    uri: http://pp.info.uni-karlsruhe.de/git/libfirm.git
+
+jobs:
+- name: build-libfirm
+  plan:
+  - get: cifirm
+  - get: libfirm
+  - task: build
+    file: cifirm/concourse/task-build-libfirm.yml
+- name: build-cparser
+  plan:
+  - get: cifirm
+  - get: cparser
+    submodules: none
+  - task: build
+    file: cifirm/concourse/task-build-cparser.yml

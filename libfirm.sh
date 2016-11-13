@@ -1,5 +1,5 @@
 #!/bin/bash
-set -eu
+set -eux
 
 . common
 CONFIG_REV="$(git rev-parse HEAD)"

@@ -1,2 +1,2 @@
 #!/bin/sh
-cd /root/cifirm && $@
+cd /root/cifirm && PATH="/root/cifirm:$PATH" $@

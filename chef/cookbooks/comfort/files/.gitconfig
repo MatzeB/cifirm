@@ -1,0 +1,25 @@
+[alias]
+	bvv = branch -vv
+	co = checkout
+	di = diff
+	dx = diff --cached
+	fixup = commit --amend -C HEAD
+	lg = log --decorate --graph --name-status
+	lg1 = log --decorate --graph --oneline
+	cp = cherry-pick
+	plog = log --decorate --graph --patch
+[color]
+	ui = auto
+[push]
+	default = current
+[pull]
+	rebase = true
+[diff]
+	renames = copies
+[merge]
+	conflictstyle = diff3
+[core]
+	pager = less -+S -x 4 -R -~
+[log]
+	decorate = true
+	date = local
